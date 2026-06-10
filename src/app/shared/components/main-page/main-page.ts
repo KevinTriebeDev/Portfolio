@@ -4,6 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-main-page',
   imports: [],
   templateUrl: './main-page.html',
-  styles: ``,
+  styleUrl: './main-page.scss',
 })
 export class MainPage {}

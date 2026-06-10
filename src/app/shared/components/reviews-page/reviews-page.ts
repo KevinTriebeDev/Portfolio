@@ -4,6 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-reviews-page',
   imports: [],
   templateUrl: './reviews-page.html',
-  styles: ``,
+  styleUrl: './reviews-page.scss',
 })
 export class ReviewsPage {}

@@ -4,6 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-last-work-page',
   imports: [],
   templateUrl: './last-work-page.html',
-  styles: ``,
+  styleUrl: './last-work-page.scss',
 })
 export class LastWorkPage {}

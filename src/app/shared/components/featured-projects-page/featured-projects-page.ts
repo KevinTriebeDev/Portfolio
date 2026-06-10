@@ -4,6 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-featured-projects-page',
   imports: [],
   templateUrl: './featured-projects-page.html',
-  styles: ``,
+  styleUrl: './featured-projects-page.scss',
 })
 export class FeaturedProjectsPage {}
