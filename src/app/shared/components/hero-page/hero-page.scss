@@ -1,6 +1,8 @@
 .hero-wrapper {  
   display: flex;
   flex-direction: column;
+  position: relative;
+  z-index: 1;
 }
 
 .hero-page {
@@ -8,7 +10,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 0 25px;
+  padding: 0 100px;
   height: 100px;
   background: linear-gradient(#000000a2, #00000000);
 }
@@ -21,6 +23,37 @@
 .hero-page img {
   width: 150px;
   height: auto;
+}
+
+.hero-page a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+}
+
+.hero-page a:hover {
+  color: #3DCFB6;
+}
+
+.hero-page a::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #3DCFB6;
+  color: #3DCFB6;
+  transform: translateX(-50%) scale(0);
+  transition: transform 0.2s ease;
+}
+
+.hero-page a:hover::after {
+  transform: translateX(-50%) scale(1);
 }
 
 
