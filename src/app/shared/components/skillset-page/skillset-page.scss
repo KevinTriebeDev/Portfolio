@@ -1,12 +1,299 @@
 .ssp {
-    background-color: #1C1C1C;
+    background: radial-gradient(circle at 12% 50%, rgba(61, 207, 182, 0.18) 0%, rgba(28, 28, 28, 0) 35%), #1C1C1C;
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
-    height: 900px;
+    min-height: 900px;
+    color: #F4F7F6;
 }
 
 .ssp .container {
+    position: relative;
     height: 100%;
-    padding:0;
+    min-height: 900px;
+    padding: 72px 100px;
+}
+
+.ssp > .container > .skillset-title {
+    color: #3DCFB6;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.skillset-card {
+    width: 520px;
+    min-height: 500px;
+    padding: 34px 34px 30px;
+    border: 1.5px solid #3DCFB6;
+    border-radius: 28px;
+    position: relative;
+    left: 0;
+    background: linear-gradient(110deg, rgba(61, 207, 182, 0.16) 0%, rgba(31, 46, 43, 0.92) 62%, rgba(31, 46, 43, 0.9) 100%);
+}
+
+.skillset-card > .skillset-title {
+    font-size: 64px;
+    line-height: 0.95;
+    color: #3DCFB6;
+    margin-bottom: 28px;
+    letter-spacing: 0.4px;
+
+}
+
+.skillset-card > p:first-of-type {
+    font-size: 18px;
+    line-height: 1.35;
+    color: rgba(232, 238, 236, 0.9);
+    margin-bottom: 30px;
+}
+
+.skill-category-title {
+    display: inline-block;
+    font-size: 24px;
+    line-height: 1.06;
+    margin-bottom: 10px;
+    color: #F2F8F7;
+}
+
+.skill-category-title + .skill-category-title {
+    margin-left: 14px;
+    color: #3DCFB6;
+}
+
+.skill-category-title + p {
+    margin-top: 0;
+}
+
+.skillset-card > p:last-of-type {
+    font-size: 16px;
+    line-height: 1.35;
+    color: rgba(225, 234, 231, 0.75);
+    margin-top: 6px;
+    margin-bottom: 24px;
+}
+
+.skillset-card button {
+    margin-top: 20px;
+    padding: 20px 30px;
+    border: 1px solid white;
+    border-radius: 100px;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    overflow: hidden;
+    transition: border-color 0.7s ease;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.skillset-card button span {
+    display: inline-block;
+    transition: transform 0.55s ease, opacity 0.55s ease;
+}
+
+.skillset-card button:hover {
+    border-color: #3DCFB6;
+}
+
+.skillset-card button:hover span {
+    transform: translateX(-140%);
+    opacity: 0;
+}
+
+.skillset-grid {
+    position: absolute;
+    top: 10px;
+    left: calc(100% + 100px);
+    width: 650px;
+    min-height: 500px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(96px, 1fr));
+    column-gap: 44px;
+    row-gap: 44px;
+}
+
+.skillset-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    font-size: 16px;
+    gap: 12px;
+    cursor: pointer;
+    position: relative;
+}
+
+.skillset-item img {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.skillset-item:hover img {
+    transform: scale(1.12);
+}
+
+.skillset-item img:not([src*=".svg"]) {
+    filter: brightness(0) invert(1);
+}
+
+.skillset-item span {
+    color: #F1F5F4;
+    font-size: 18px;
+    line-height: 1.15;
+    letter-spacing: 0.2px;
+}
+
+.skillset-item:last-child:hover span {
+    color: #3DCFB6;
+}
+
+.tooltip-bubble {
+    position: absolute;
+    width: 200px;
+    min-height: 130px;
+    background: rgb(255, 255, 255);
+    border: 1.5px solid #3DCFB6;
+    border-radius: 12px;
+    padding: 12px;
+    bottom: calc(100% + 8px);
+    left: 100%;
+    transform: translateX(-50%);
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    z-index: 100;
+}
+
+.tooltip-bubble::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 15%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #ffffff;
+}
+
+.tooltip-bubble p {
+    color: #3DCFB6;
+    font-size: 16px;
+    line-height: 1.3;
+    text-align: center;
+    margin: 0;
+}
+
+.tooltip-images {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.tooltip-image-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.tooltip-image-item img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    filter: none !important;
+}
+
+.tooltip-image-item span {
+    color: #3DCFB6;
+    font-size: 12px;
+    line-height: 1;
+}
+
+.skillset-item:last-child:hover .tooltip-bubble {
+    opacity: 1;
+    visibility: visible;
+}
+
+@media (max-width: 1320px) {
+    .ssp .container {
+        padding: 56px 60px;
+    }
+
+    .skillset-card {
+        width: 470px;
+    }
+
+    .skillset-grid {
+        width: 470px;
+        min-height: 500px;
+        left: calc(100% + 100px);
+        column-gap: 30px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .ssp .container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 34px;
+    }
+
+    .skillset-card {
+        width: 100%;
+        max-width: 620px;
+        min-height: auto;
+    }
+
+    .skillset-grid {
+        position: static;
+        width: 100%;
+        grid-template-columns: repeat(4, minmax(90px, 1fr));
+        column-gap: 22px;
+        row-gap: 28px;
+        margin-top: 8px;
+    }
+}
+
+@media (max-width: 700px) {
+    .ssp .container {
+        padding: 40px 20px;
+    }
+
+    .ssp > .container > .skillset-title {
+        font-size: 26px;
+    }
+
+    .skillset-card > .skillset-title {
+        font-size: 52px;
+    }
+
+    .skillset-card > p:first-of-type,
+    .skillset-card > p:last-of-type {
+        font-size: 20px;
+    }
+
+    .skill-category-title {
+        font-size: 34px;
+    }
+
+    .skillset-grid {
+        grid-template-columns: repeat(3, minmax(84px, 1fr));
+    }
+
+    .skillset-item span {
+        font-size: 19px;
+    }
 }

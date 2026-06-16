@@ -1,7 +1,12 @@
 <div class="hero-wrapper">
 <div class="hero-page">
         <div class="menu-hero">
-            <button>Click me</button>
+            <button class="click-me-button" 
+                    (click)="toggleLanguage()"
+                    (mouseenter)="onHoverStart()"
+                    (mouseleave)="onHoverEnd()">
+                <img [src]="clickMeImageSrc" alt="Click Me">
+            </button>
             <a href="">About me</a>
             <a href="">Skills</a>
             <a href="">Projects</a>
