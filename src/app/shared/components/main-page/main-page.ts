@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { HeaderPage } from '../header-page/header-page';
 import { AboutMePage } from '../about-me-page/about-me-page';
-import { LastWorkPage } from '../last-work-page/last-work-page';
 import { SkillsetPage } from '../skillset-page/skillset-page';
+import { LastWorkPage } from '../last-work-page/last-work-page';
 import { FeaturedProjectsPage } from '../featured-projects-page/featured-projects-page';
 import { ReviewsPage } from '../reviews-page/reviews-page';
 

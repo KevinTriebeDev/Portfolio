@@ -7,6 +7,80 @@
 }
 
 .amp .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
     height: 100%;
     padding:0;
+
+}
+
+.Amimg {
+    position: relative;
+    width: 570px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-image {
+    position: absolute;
+    width: 570px;
+    height: 550px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.profile-image:first-of-type {
+    z-index: 10;
+}
+
+.profile-image:last-of-type {
+    z-index: 9;
+    transform: translate(-40px, 20px);
+}
+
+.AmTextWrap {
+    display: flex;
+    flex-direction: column;
+    width: 570px;
+    height: 550px;
+    position: relative;
+    transform: translateY(60px);
+}
+
+.who-i-am {
+    font-size: 24px;
+    color: #3DCFB6;
+    margin: 0 0 12px 4px;
+    font-weight: 700;
+}
+
+.AmText {
+    width: 570px;
+    height: 550px;
+    padding: 30px;
+    border: 2px solid #3DCFB6;
+    border-radius: 20px;
+    background-color: #1F2E2B;
+    color: rgba(255, 255, 255, 0.473);
+}
+
+.AmText h2 {
+    font-size: 64px;
+    margin-bottom: 20px;
+    color: #3DCFB6;
+}
+
+.about-detail-line {
+    margin-left: -10px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.about-detail-text {
+    margin-left: 28px;
 }
