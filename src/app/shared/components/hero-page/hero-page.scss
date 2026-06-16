@@ -3,6 +3,8 @@
   flex-direction: column;
   position: relative;
   z-index: 1;
+  width: 100%;
+  background: linear-gradient(#000000a2, #00000000);  
 }
 
 .hero-page {
@@ -10,9 +12,10 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  width: 1440px;
+  margin: 0 auto;
   padding: 0 100px;
   height: 100px;
-  background: linear-gradient(#000000a2, #00000000);
 }
 
 .menu-hero {
