@@ -38,7 +38,7 @@
 
 
 .hero-page-content h1 {
-  font-size: 130px;
+  font-size: 100px;
   
 }
 
@@ -75,7 +75,7 @@
 
 .scroll-widget {
   position: absolute;
-  left: max(20px, calc((100% - 1440px) / 2));
+  left: 100px;
   bottom: 0;
   display: flex;
   flex-direction: column;
@@ -114,7 +114,7 @@
 
 .contact-widget {
   position: absolute;
-  right: max(20px, calc((100% - 1440px) / 2));
+  right: 100px;
   bottom: 0;
   display: flex;
   flex-direction: column;

@@ -1,17 +1,17 @@
 .ssp {
-    background: radial-gradient(circle at 12% 50%, rgba(61, 207, 182, 0.18) 0%, rgba(28, 28, 28, 0) 35%), #1C1C1C;
+    background: radial-gradient(circle at 0% 50%, rgba(61, 207, 183, 0.226) 0%, rgba(28, 28, 28, 0) 20%), #1C1C1C;
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
-    min-height: 900px;
+    min-height: 700px;
     color: #F4F7F6;
 }
 
 .ssp .container {
     position: relative;
     height: 100%;
-    min-height: 900px;
-    padding: 72px 100px;
+    min-height: 600px;
+    padding-inline: 100px;
 }
 
 .ssp > .container > .skillset-title {
@@ -29,7 +29,7 @@
     border-radius: 28px;
     position: relative;
     left: 0;
-    background: linear-gradient(110deg, rgba(61, 207, 182, 0.16) 0%, rgba(31, 46, 43, 0.92) 62%, rgba(31, 46, 43, 0.9) 100%);
+    background: linear-gradient(110deg, rgba(61, 207, 183, 0.116) 0%, rgba(31, 46, 43, 0.92) 62%, rgba(31, 46, 43, 0.9) 100%);
 }
 
 .skillset-card > .skillset-title {
@@ -106,7 +106,7 @@
     top: 10px;
     left: calc(100% + 100px);
     width: 650px;
-    min-height: 500px;
+    height: 430px;
     display: grid;
     grid-template-columns: repeat(4, minmax(96px, 1fr));
     column-gap: 44px;
@@ -226,74 +226,4 @@
     visibility: visible;
 }
 
-@media (max-width: 1320px) {
-    .ssp .container {
-        padding: 56px 60px;
-    }
 
-    .skillset-card {
-        width: 470px;
-    }
-
-    .skillset-grid {
-        width: 470px;
-        min-height: 500px;
-        left: calc(100% + 100px);
-        column-gap: 30px;
-    }
-}
-
-@media (max-width: 1100px) {
-    .ssp .container {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 34px;
-    }
-
-    .skillset-card {
-        width: 100%;
-        max-width: 620px;
-        min-height: auto;
-    }
-
-    .skillset-grid {
-        position: static;
-        width: 100%;
-        grid-template-columns: repeat(4, minmax(90px, 1fr));
-        column-gap: 22px;
-        row-gap: 28px;
-        margin-top: 8px;
-    }
-}
-
-@media (max-width: 700px) {
-    .ssp .container {
-        padding: 40px 20px;
-    }
-
-    .ssp > .container > .skillset-title {
-        font-size: 26px;
-    }
-
-    .skillset-card > .skillset-title {
-        font-size: 52px;
-    }
-
-    .skillset-card > p:first-of-type,
-    .skillset-card > p:last-of-type {
-        font-size: 20px;
-    }
-
-    .skill-category-title {
-        font-size: 34px;
-    }
-
-    .skillset-grid {
-        grid-template-columns: repeat(3, minmax(84px, 1fr));
-    }
-
-    .skillset-item span {
-        font-size: 19px;
-    }
-}

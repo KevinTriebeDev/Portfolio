@@ -1,6 +1,55 @@
 <div class="fpp">
   <div class="container">
-    <p>featured-projects-page works!</p>
-    <p>featured-projects-page works!</p>
+    <div class="fpp__intro">
+      <h3 class="fpp__eyebrow">Portfolio</h3>
+      <h2 class="fpp__title">Featured Projects</h2>
+      <p class="fpp__description">Explore a selection of my work here - Interact with projects to see my skills in action.</p>
+    </div>
+
+    <div class="fpp__content" (mouseleave)="clearHoveredProject()">
+      <div class="fpp__projects">
+        @for (project of projects; track project.title; let index = $index) {
+          <article
+            class="fpp__project"
+            [class.fpp__project--active]="hoveredProjectIndex === index"
+            (mouseenter)="setHoveredProject(index)">
+            <a class="fpp__project-link" [href]="project.href">
+              <div class="fpp__project-main">
+                <h3 class="fpp__project-title">
+                  {{ project.title }}
+                  @if (hoveredProjectIndex === index) {
+                    <span class="fpp__project-arrow">↗</span>
+                  }
+                </h3>
+                <div class="fpp__technologies">
+                  @for (technology of project.technologies; track technology; let last = $last) {
+                    <span>
+                      {{ technology }}@if (!last) {
+                        <span class="fpp__separator">|</span>
+                      }
+                    </span>
+                  }
+                </div>
+              </div>
+            </a>
+          </article>
+        }
+      </div>
+
+      <div class="fpp__preview">
+        @if (hoveredProjectIndex !== null) {
+          <div
+            class="fpp__preview-card"
+            [class.fpp__preview-card--top]="hoveredProjectIndex === 0"
+            [class.fpp__preview-card--middle]="hoveredProjectIndex === 1"
+            [class.fpp__preview-card--bottom]="hoveredProjectIndex === 2">
+            <img
+              [src]="projects[hoveredProjectIndex].image"
+              [alt]="projects[hoveredProjectIndex].alt"
+              class="fpp__preview-image">
+          </div>
+        }
+      </div>
+    </div>
   </div>
 </div>
