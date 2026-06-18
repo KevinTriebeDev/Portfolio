@@ -25,12 +25,46 @@
   height: 100%;
 }
 
-.hero-page img {
-  width: 150px;
-  height: auto;
+.hero-logo-link {
+  display: inline-block;
+  position: relative;
+  line-height: 0;
 }
 
-.hero-page a {
+.hero-logo-link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('/assets/img/krt_logo_big.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left center;
+  opacity: 0;
+  pointer-events: none;
+  filter: grayscale(1) brightness(2.3) contrast(2.2)
+    drop-shadow(0 0 0.5px #ffffff)
+    drop-shadow(0 0 6px rgba(61, 207, 182, 0.45));
+  transition: opacity 0.22s ease;
+}
+
+.hero-logo {
+  width: 150px;
+  height: auto;
+  display: block;
+  transition: opacity 0.22s ease;
+}
+
+.hero-logo-link:hover .hero-logo,
+.hero-logo-link:focus-visible .hero-logo {
+  opacity: 0.08;
+}
+
+.hero-logo-link:hover::after,
+.hero-logo-link:focus-visible::after {
+  opacity: 1;
+}
+
+.menu-hero a {
   color: white;
   text-decoration: none;
   font-size: 16px;
@@ -41,11 +75,11 @@
   height: 100%;
 }
 
-.hero-page a:hover {
+.menu-hero a:hover {
   color: #3DCFB6;
 }
 
-.hero-page a::after {
+.menu-hero a::after {
   content: "";
   position: absolute;
   bottom: -10px;
@@ -59,7 +93,7 @@
   transition: transform 0.2s ease;
 }
 
-.hero-page a:hover::after {
+.menu-hero a:hover::after {
   transform: translateX(-50%) scale(1);
 }
 

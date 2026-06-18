@@ -1,6 +1,70 @@
 <div class="rp">
   <div class="container">
-    <p>reviews-page works!</p>
-    <p>reviews-page works!</p>
+    <h2 class="rp__title">What my colleagues say about me</h2>
+
+    <div class="rp__viewport">
+      <img
+        class="rp__quote"
+        src="/assets/img/quotes.png"
+        alt=""
+        aria-hidden="true">
+
+      <div
+        class="rp__track"
+        [class.rp__track--no-transition]="!isTransitionEnabled"
+        [style.transform]="trackTransform"
+        (transitionend)="onTrackTransitionEnd()">
+        @for (testimonial of displayTestimonials; track $index; let index = $index) {
+          <article class="rp__slide" [class.rp__slide--active]="index === visualIndex">
+            <div class="rp__card">
+              <p class="rp__text">{{ testimonial.quote }}</p>
+
+              <div class="rp__author-row">
+                <span class="rp__author-line"></span>
+                <p class="rp__author">{{ testimonial.author }} - {{ testimonial.role }}</p>
+              </div>
+            </div>
+          </article>
+        }
+      </div>
+    </div>
+
+    <div class="rp__controls">
+      <button
+        class="rp__arrow-button"
+        type="button"
+        (click)="prev()"
+        (mouseenter)="prevHovered = true"
+        (mouseleave)="prevHovered = false"
+        aria-label="Previous review">
+        <img
+          class="rp__arrow rp__arrow--left"
+          [src]="prevHovered ? arrowHover : arrowDefault"
+          alt="">
+      </button>
+
+      <div class="rp__dots" role="tablist" aria-label="Review slides">
+        @for (testimonial of testimonials; track testimonial.author; let index = $index) {
+          <span
+            class="rp__dot"
+            [class.rp__dot--active]="index === activeIndex"
+            (click)="goTo(index)"
+            role="tab"
+            [attr.aria-selected]="index === activeIndex"
+            [attr.aria-label]="'Go to review ' + (index + 1)">
+          </span>
+        }
+      </div>
+
+      <button
+        class="rp__arrow-button"
+        type="button"
+        (click)="next()"
+        (mouseenter)="nextHovered = true"
+        (mouseleave)="nextHovered = false"
+        aria-label="Next review">
+        <img class="rp__arrow" [src]="nextHovered ? arrowHover : arrowDefault" alt="">
+      </button>
+    </div>
   </div>
 </div>
