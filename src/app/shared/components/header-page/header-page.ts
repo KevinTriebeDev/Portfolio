@@ -6,4 +6,11 @@ import { Component } from '@angular/core';
   templateUrl: './header-page.html',
   styleUrl: './header-page.scss',
 })
-export class HeaderPage {}
+export class HeaderPage {
+  scrollToFeaturedProjects(): void {
+    document.getElementById('featured-projects')?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
+  }
+}

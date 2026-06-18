@@ -93,7 +93,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
+  cursor: default;
+  pointer-events: none;
 }
 
 .scroll-arrow {
@@ -127,8 +128,15 @@
   color: #ffffff;
   height: 30px;
   font-size: 16px;
+  text-decoration: none;
   writing-mode: vertical-rl;
   transform: rotate(180deg);
+  transition: color 0.2s ease;
+}
+
+.contact-email:hover,
+.contact-email:focus-visible {
+  color: #3DCFB6;
 }
 
 .contact-icons {
@@ -138,10 +146,41 @@
   gap: 12px;
 }
 
+.contact-icon-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-icon-link::after {
+  content: "";
+  position: absolute;
+  right: -12px;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #3DCFB6;
+  transform: translateY(-50%) scale(0);
+  transition: transform 0.2s ease;
+}
+
 .contact-icons img {
   width: 32px;
   height: 32px;
   object-fit: contain;
+  transition: transform 0.2s ease;
+}
+
+.contact-icon-link:hover img,
+.contact-icon-link:focus-visible img {
+  transform: scale(1.12);
+}
+
+.contact-icon-link:hover::after,
+.contact-icon-link:focus-visible::after {
+  transform: translateY(-50%) scale(1);
 }
 
 .contact-indicator {

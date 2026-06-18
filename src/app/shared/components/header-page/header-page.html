@@ -3,21 +3,25 @@
     <h3>Fullstack Developer</h3>
     <h1>Kevin Reinhold Triebe</h1>
     <div class="hero-buttons">
-        <button><span>Check my work</span></button>
+        <button type="button" (click)="scrollToFeaturedProjects()"><span>Check my work</span></button>
         <button><span>Contact me</span></button>
     </div>
 </div>
 <div class="scroll-widget">
-    <button class="scroll-button">
+    <div class="scroll-button" aria-hidden="true">
         <span class="scroll-arrow">↓</span>
-    </button>
+    </div>
     <span class="scroll-indicator"></span>
 </div>
 <div class="contact-widget">
-    <span class="contact-email">kevintriebe2025@gmail.com</span>
+    <a class="contact-email" href="mailto:kevintriebe2025@gmail.com">kevintriebe2025@gmail.com</a>
     <div class="contact-icons">
-        <img src="/assets/img/Github.png" alt="GitHub">
-        <img src="/assets/img/Linkedin.png" alt="LinkedIn">
+        <a class="contact-icon-link" href="#" aria-label="GitHub">
+            <img src="/assets/img/Github.png" alt="GitHub">
+        </a>
+        <a class="contact-icon-link" href="https://www.linkedin.com/" aria-label="LinkedIn">
+            <img src="/assets/img/Linkedin.png" alt="LinkedIn">
+        </a>
         
     </div>
     <span class="contact-indicator"></span>

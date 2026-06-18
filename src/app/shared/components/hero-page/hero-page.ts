@@ -27,4 +27,12 @@ export class HeroPage {
   onHoverEnd(): void {
     this.isHovered.set(false);
   }
+
+  scrollToSection(sectionId: string, event: Event): void {
+    event.preventDefault();
+    document.getElementById(sectionId)?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
+  }
 }

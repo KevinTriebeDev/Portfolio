@@ -7,9 +7,9 @@
                     (mouseleave)="onHoverEnd()">
                 <img [src]="clickMeImageSrc" alt="Click Me">
             </button>
-            <a href="">About me</a>
-            <a href="">Skills</a>
-            <a href="">Projects</a>
+            <a href="#about-me" (click)="scrollToSection('about-me', $event)">About me</a>
+            <a href="#skills" (click)="scrollToSection('skills', $event)">Skills</a>
+            <a href="#featured-projects" (click)="scrollToSection('featured-projects', $event)">Projects</a>
         </div>
         <a class="hero-logo-link" href="#" aria-label="Back to top">
       <img class="hero-logo" src="/assets/img/krt_logo_big.png" alt="Hero Image">
