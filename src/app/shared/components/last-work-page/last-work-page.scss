@@ -1,13 +1,279 @@
 .lwp {
-    background-color: #1C1C1C;
+    background: #1c1c1c;
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
-    height: 900px;
+    min-height: 900px;
+    color: #f1f5f4;
 
 }
 
 .lwp .container {
+    min-height: 900px;
+    padding: 110px 100px 90px;
+    display: grid;
+    grid-template-columns: minmax(360px, 460px) minmax(420px, 1fr);
+    column-gap: 96px;
+}
+
+.contact-copy {
+    padding-top: 12px;
+}
+
+.section-label {
+    margin: 0 0 18px;
+    color: #3dcfb6;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.contact-copy h2 {
+    margin: 0 0 26px;
+    font-size: 64px;
+    line-height: 0.9;
+    color: #3dcfb6;
+}
+
+.contact-copy h3 {
+    margin: 0 0 12px;
+    font-size: 24px;
+    line-height: 1;
+    color: #3dcfb6;
+}
+
+.description {
+    margin: 0 0 20px;
+    max-width: 430px;
+    font-size: 16px;
+    line-height: 1.35;
+    color: rgba(241, 245, 244, 0.92);
+}
+
+.cta {
+    margin: 0;
+    font-size: 16px;
+    color: #f1f5f4;
+}
+
+.cta span {
+    color: #3dcfb6;
+    font-weight: 700;
+}
+
+.contact-form {
+    width: 100%;
+    max-width: 720px;
+    padding-top: 10px;
+}
+
+.form-field {
+    border-top: 1px solid #3dcfb6;
+    padding: 26px 0 22px;
+}
+
+.form-field label {
+    display: block;
+    margin-bottom: 14px;
+    color: #3dcfb6;
+    font-size: 24px;
+    line-height: 1;
+    font-weight: 700;
+}
+
+.form-field input,
+.form-field textarea {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: #f1f5f4;
+    font-size: 18px;
+    line-height: 1.25;
+    padding: 0;
+    font-family: inherit;
+}
+
+.form-field input {
+    height: 42px;
+}
+
+.form-field textarea {
+    resize: none;
+    min-height: 44px;
+    height: 44px;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+    color: rgba(241, 245, 244, 0.72);
+}
+
+.form-field input.invalid-placeholder::placeholder,
+.form-field textarea.invalid-placeholder::placeholder {
+    color: #ff5a5a;
+}
+
+.consent-wrap {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.consent-checkbox {
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    flex: 0 0 auto;
+    margin-top: 2px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 0;
+}
+
+.consent-checkbox img {
+    width: 100%;
     height: 100%;
-    padding:0;
+    display: block;
+    object-fit: contain;
+    transition: filter 0.2s ease;
+}
+
+.consent-checkbox:hover img {
+    filter: drop-shadow(0 0 8px #3dcfb6);
+}
+
+
+.consent-wrap p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.4;
+    color: rgba(241, 245, 244, 0.92);
+}
+
+.privacy-link {
+    color: #3dcfb6;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.privacy-link:hover {
+    color: #ffffff;
+    border-bottom-color: #3dcfb6;
+}
+
+.consent-error-slot {
+    min-height: 28px;
+    margin-top: 6px;
+    margin-left: 36px;
+}
+
+.consent-error {
+    color: #ff5a5a;
+    font-size: 16px;
+    line-height: 1.2;
+}
+
+.submit-button {
+    margin-top: 18px;
+    margin-left: 268px;
+    min-width: 170px;
+    height: 58px;
+    border-radius: 40px;
+    border: 1px solid #ffffff;
+    background: transparent;
+    color: #ffffff;
+    font-size: 18px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: border-color 0.7s ease;
+}
+
+.submit-button span {
+    display: inline-block;
+    transition: transform 0.55s ease, opacity 0.55s ease;
+}
+
+.submit-button:hover {
+    border-color: #3dcfb6;
+}
+
+.submit-button:hover span {
+    transform: translateX(-140%);
+    opacity: 0;
+}
+
+@media (max-width: 1200px) {
+    .lwp .container {
+        grid-template-columns: 1fr;
+        row-gap: 44px;
+        padding: 90px 40px 70px;
+    }
+
+    .contact-copy h2 {
+        font-size: 74px;
+    }
+
+    .contact-copy h3 {
+        font-size: 34px;
+    }
+
+    .description,
+    .cta,
+    .form-field input,
+    .form-field textarea,
+    .consent-wrap p,
+    .consent-error,
+    .submit-button {
+        font-size: 20px;
+    }
+
+    .form-field label {
+        font-size: 34px;
+    }
+
+    .submit-button {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 700px) {
+    .lwp .container {
+        padding: 78px 20px 60px;
+    }
+
+    .section-label {
+        font-size: 26px;
+    }
+
+    .contact-copy h2 {
+        font-size: 54px;
+    }
+
+    .contact-copy h3 {
+        font-size: 28px;
+    }
+
+    .description,
+    .cta,
+    .form-field input,
+    .form-field textarea,
+    .consent-wrap p,
+    .consent-error,
+    .submit-button {
+        font-size: 18px;
+    }
+
+    .form-field label {
+        font-size: 30px;
+    }
+
+    .consent-error-slot {
+        margin-left: 0;
+    }
 }

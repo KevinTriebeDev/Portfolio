@@ -1,5 +1,76 @@
 <div class="lwp">
-<div class="container">
-  <p>last-work-page works!</p>
-</div>
+  <div class="container">
+    <div class="contact-copy">
+      <p class="section-label">Contact me</p>
+      <h2>Let's work together</h2>
+      <h3>Got a problem to solve?</h3>
+      <p class="description">
+        Encourage people to contact you and describe what role you are interested in.
+        Show that you will add value to their projects through your work.
+      </p>
+      <p class="cta">Need a Frontend developer? <span>Let's talk!</span></p>
+    </div>
+
+    <form class="contact-form" novalidate (submit)="onSubmit($event)">
+      <div class="form-field">
+        <label for="contactName">What's your name?</label>
+        <input
+          id="contactName"
+          type="text"
+          [value]="name"
+          (input)="name = $any($event.target).value"
+          [placeholder]="namePlaceholder"
+          [class.invalid-placeholder]="!!nameError"
+        >
+      </div>
+
+      <div class="form-field">
+        <label for="contactEmail">What's your email?</label>
+        <input
+          id="contactEmail"
+          type="email"
+          [value]="email"
+          (input)="email = $any($event.target).value"
+          [placeholder]="emailPlaceholder"
+          [class.invalid-placeholder]="!!emailError"
+        >
+      </div>
+
+      <div class="form-field">
+        <label for="contactMessage">How can I help you?</label>
+        <textarea
+          id="contactMessage"
+          [value]="helpMessage"
+          (input)="helpMessage = $any($event.target).value"
+          [placeholder]="helpPlaceholder"
+          [class.invalid-placeholder]="!!helpError"
+        ></textarea>
+      </div>
+
+      <div class="consent-wrap">
+        <button
+          type="button"
+          class="consent-checkbox"
+          (click)="togglePrivacy()"
+          (mouseenter)="setCheckboxHover(true)"
+          (mouseleave)="setCheckboxHover(false)"
+        >
+          <img 
+            [src]="checkboxIcon" 
+            alt="Privacy consent checkbox"
+          >
+        </button>
+        <p>
+          I've read the
+          <a href="#" class="privacy-link">privacy policy</a>
+          and agree to the processing of my data as outlined.
+        </p>
+      </div>
+      <div class="consent-error-slot">
+        <span class="consent-error">{{ privacyError }}</span>
+      </div>
+
+      <button type="submit" class="submit-button"><span>Say Hello :)</span></button>
+    </form>
+  </div>
 </div>
