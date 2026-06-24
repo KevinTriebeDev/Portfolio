@@ -13,7 +13,7 @@
             class="fpp__project"
             [class.fpp__project--active]="hoveredProjectIndex === index"
             (mouseenter)="setHoveredProject(index)">
-            <a class="fpp__project-link" [href]="project.href">
+            <a class="fpp__project-link" [href]="project.href" (click)="openProjectDialog(index, $event)">
               <div class="fpp__project-main">
                 <h3 class="fpp__project-title">
                   {{ project.title }}
@@ -52,4 +52,50 @@
       </div>
     </div>
   </div>
+
+  @if (activeDialogIndex !== null) {
+    <div class="fpp-dialog-backdrop" (click)="onDialogBackdropClick($event)">
+      <article class="fpp-dialog">
+        <button class="fpp-dialog__close" type="button" (click)="closeProjectDialog()" aria-label="Close dialog">×</button>
+
+        <div class="fpp-dialog__content">
+          <div class="fpp-dialog__left">
+            <p class="fpp-dialog__number">{{ projects[activeDialogIndex].number }}</p>
+            <h3 class="fpp-dialog__title">{{ projects[activeDialogIndex].headline }}</h3>
+            <h4 class="fpp-dialog__subtitle">What is this project about?</h4>
+            <p class="fpp-dialog__description">{{ projects[activeDialogIndex].description }}</p>
+
+            <div class="fpp-dialog__stack">
+              @for (tech of projects[activeDialogIndex].stack; track tech.name) {
+                <span class="fpp-dialog__tech-item">
+                  <img [src]="tech.icon" [alt]="tech.name">
+                  {{ tech.name }}
+                </span>
+              }
+            </div>
+
+            <div class="fpp-dialog__actions">
+              <a [href]="projects[activeDialogIndex].githubUrl" class="fpp-dialog__action-link" target="_blank" rel="noopener noreferrer">
+                GitHub <span>↗</span>
+              </a>
+              <a [href]="projects[activeDialogIndex].liveUrl" class="fpp-dialog__action-link" target="_blank" rel="noopener noreferrer">
+                Live Test <span>↗</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="fpp-dialog__right">
+            <img
+              [src]="projects[activeDialogIndex].dialogImage"
+              [alt]="projects[activeDialogIndex].alt"
+              class="fpp-dialog__image">
+          </div>
+        </div>
+
+        <button type="button" class="fpp-dialog__next" (click)="openNextProject()">
+          Next project <span>→</span>
+        </button>
+      </article>
+    </div>
+  }
 </div>

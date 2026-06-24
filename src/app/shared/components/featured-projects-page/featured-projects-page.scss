@@ -169,6 +169,153 @@
     border-radius: 28px;
 }
 
+.fpp-dialog-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(6, 7, 8, 0.62);
+    z-index: 1200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.fpp-dialog {
+    width: min(1160px, 100%);
+    border-radius: 22px;
+    border: 1px solid rgba(61, 207, 182, 0.45);
+    padding: 62px 44px 62px;
+    position: relative;
+    background:
+        radial-gradient(circle at 82% 42%, rgba(61, 207, 182, 0.26) 0%, rgba(61, 207, 182, 0) 44%),
+        #1a1b1e;
+    color: #f5f8f7;
+}
+
+.fpp-dialog__close {
+    position: absolute;
+    top: 14px;
+    right: 26px;
+    border: 0;
+    background: transparent;
+    color: #f5f8f7;
+    font-size: 30px;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.fpp-dialog__content {
+    display: grid;
+    grid-template-columns: 1fr minmax(320px, 520px);
+    gap: 40px;
+    align-items: start;
+}
+
+.fpp-dialog__number {
+    margin: 0;
+    font-size: 128px;
+    font-weight: 700;
+    line-height: 0.9;
+    color: #3dcfb6;
+}
+
+.fpp-dialog__title {
+    margin: 4px 0 26px;
+    font-size: 64px;
+    line-height: 0.92;
+    letter-spacing: 0.01em;
+}
+
+.fpp-dialog__subtitle {
+    margin: 0 0 14px;
+    color: #3dcfb6;
+    font-size: 24px;
+    line-height: 1;
+}
+
+.fpp-dialog__description {
+    margin: 0 0 18px;
+    max-width: 520px;
+    color: rgba(245, 248, 247, 0.9);
+    font-size: 18px;
+    line-height: 1.45;
+}
+
+.fpp-dialog__stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 28px;
+}
+
+.fpp-dialog__tech-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 16px;
+    color: #dce7e5;
+}
+
+.fpp-dialog__tech-item img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.fpp-dialog__actions {
+    display: flex;
+    gap: 14px;
+}
+
+.fpp-dialog__action-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    min-height: 40px;
+    padding: 8px 16px;
+    border: 1px solid rgba(245, 248, 247, 0.65);
+    border-radius: 999px;
+    text-decoration: none;
+    color: #f5f8f7;
+    font-size: 16px;
+}
+
+.fpp-dialog__action-link span {
+    transform: translateY(-1px) rotate(12deg);
+    display: inline-block;
+    color: #3dcfb6;
+}
+
+.fpp-dialog__right {
+    width: 100%;
+}
+
+.fpp-dialog__image {
+    width: 100%;
+    max-height: 370px;
+    object-fit: cover;
+    border-radius: 20px;
+    display: block;
+}
+
+.fpp-dialog__next {
+    position: absolute;
+    right: 26px;
+    bottom: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 0;
+    background: transparent;
+    color: #3dcfb6;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.fpp-dialog__next span {
+    font-size: 24px;
+}
+
 @media (max-width: 1100px) {
     .fpp {
         min-height: auto;
@@ -182,6 +329,33 @@
 
     .fpp__preview {
         display: none;
+    }
+
+    .fpp-dialog {
+        padding: 52px 24px 52px;
+    }
+
+    .fpp-dialog__close {
+        top: 12px;
+        right: 18px;
+    }
+
+    .fpp-dialog__next {
+        right: 18px;
+        bottom: 12px;
+    }
+
+    .fpp-dialog__content {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .fpp-dialog__title {
+        font-size: 48px;
+    }
+
+    .fpp-dialog__subtitle {
+        font-size: 30px;
     }
 }
 

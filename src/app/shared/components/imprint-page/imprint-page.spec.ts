@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Imprest } from './imprest';
+import { ImprintPage } from './imprint-page';
 
-describe('Imprest', () => {
-  let component: Imprest;
-  let fixture: ComponentFixture<Imprest>;
+describe('ImprintPage', () => {
+  let component: ImprintPage;
+  let fixture: ComponentFixture<ImprintPage>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Imprest],
+      imports: [ImprintPage],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(Imprest);
+    fixture = TestBed.createComponent(ImprintPage);
     component = fixture.componentInstance;
-    await fixture.whenStable();
+    fixture.detectChanges();
   });
 
   it('should create', () => {
