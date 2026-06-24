@@ -39,7 +39,7 @@ export class LastWorkPage {
   }
 
   get helpPlaceholder(): string {
-    return this.helpError || 'Hello Lukas, I am interested in...';
+    return this.helpError || 'Hello, I am interested in...';
   }
 
   get checkboxIcon(): string {
