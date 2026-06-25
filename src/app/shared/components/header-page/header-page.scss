@@ -135,6 +135,10 @@
   transition: color 0.2s ease;
 }
 
+.contact-email-icon {
+  display: none;
+}
+
 .contact-email:hover,
 .contact-email:focus-visible {
   color: #3DCFB6;
@@ -189,6 +193,16 @@
   width: 1px;
   height: 200px;
   background-color: #ffffff;
+}
+
+@media (min-width: 1441px) {
+  .scroll-widget {
+    left: max(100px, calc((100vw - 1440px) / 2 + 100px));
+  }
+
+  .contact-widget {
+    right: max(100px, calc((100vw - 1440px) / 2 + 100px));
+  }
 }
 
 .header-banner {
@@ -311,6 +325,31 @@
 
   .contact-indicator {
     height: 140px;
+  }
+
+  .contact-email {
+    display: none;
+  }
+
+  .contact-email-icon {
+    display: inline-flex;
+  }
+
+  .contact-email-icon img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    transition: transform 0.2s ease;
+  }
+
+  .contact-email-icon:hover img,
+  .contact-email-icon:focus-visible img {
+    transform: scale(1.12);
+  }
+
+  .contact-email-icon:hover::after,
+  .contact-email-icon:focus-visible::after {
+    transform: translateY(-50%) scale(1);
   }
 
   .header-banner {
