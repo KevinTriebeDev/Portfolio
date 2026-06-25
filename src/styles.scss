@@ -8,6 +8,11 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f0f0f0;
+    overflow-x: hidden;
+}
+
+html {
+  overflow-x: hidden;
 }
 
 :root {

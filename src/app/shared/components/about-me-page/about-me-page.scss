@@ -13,7 +13,7 @@
     justify-content: center;
     gap: 80px;
     height: 100%;
-    padding:0;
+    padding: 120px 0 0;
 
 }
 
@@ -83,4 +83,132 @@
 
 .about-detail-text {
     margin-left: 28px;
+}
+
+@media (min-width: 769px) and (max-width: 1440px) {
+    .amp {
+        height: auto;
+        min-height: 760px;
+    }
+
+    .amp .container {
+        padding: 96px 48px 0;
+        gap: 40px;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .Amimg {
+        width: min(42vw, 460px);
+        max-width: 460px;
+        height: 100%;
+        min-height: 420px;
+    }
+
+    .profile-image {
+        width: 100%;
+        max-width: 460px;
+        height: auto;
+        aspect-ratio: 570 / 550;
+    }
+
+    .AmTextWrap {
+        width: min(42vw, 460px);
+        max-width: 460px;
+        height: auto;
+        transform: translateY(24px);
+    }
+
+    .AmText {
+        width: 100%;
+        height: auto;
+        min-height: 420px;
+        padding: 24px;
+    }
+
+    .AmText h2 {
+        font-size: clamp(46px, 4.8vw, 58px);
+        margin-bottom: 16px;
+    }
+
+    .who-i-am {
+        font-size: 20px;
+    }
+
+    .about-detail-text,
+    .AmText p {
+        font-size: 14px;
+        line-height: 1.35;
+    }
+}
+
+@media (max-width: 768px) {
+    .amp {
+        height: 100%;
+        padding-top: 28px;
+    }
+
+    .amp .container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 28px;
+        padding: 36px 20px 20px;
+    }
+
+    .Amimg {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 420px;
+        aspect-ratio: 570 / 550;
+        padding-bottom: 0;
+        height: auto;
+    }
+
+    .profile-image {
+        inset: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .AmTextWrap {
+        width: 100%;
+        height: auto;
+        transform: translateY(0);
+    }
+
+    .AmText {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .AmText h2 {
+        font-size: clamp(42px, 8vw, 54px);
+    }
+}
+
+@media (max-width: 320px) {
+    .amp {
+        padding-top: 20px;
+    }
+
+    .amp .container {
+        gap: 28px;
+        padding: 28px 16px 16px;
+    }
+
+    .Amimg {
+        max-width: 100%;
+    }
+
+    .AmText {
+        padding: 18px;
+    }
+
+    .AmText h2 {
+        font-size: 42px;
+    }
 }

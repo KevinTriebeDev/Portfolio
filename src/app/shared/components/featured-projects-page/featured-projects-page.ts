@@ -30,6 +30,10 @@ type ProjectItem = {
 export class FeaturedProjectsPage implements OnDestroy {
   private readonly doc = inject(DOCUMENT);
   private previousBodyOverflow = '';
+  private previousBodyPosition = '';
+  private previousBodyTop = '';
+  private previousBodyWidth = '';
+  private scrollY = 0;
 
   readonly projects: ProjectItem[] = [
     {
@@ -141,7 +145,15 @@ export class FeaturedProjectsPage implements OnDestroy {
     }
 
     this.previousBodyOverflow = body.style.overflow;
+    this.previousBodyPosition = body.style.position;
+    this.previousBodyTop = body.style.top;
+    this.previousBodyWidth = body.style.width;
+    this.scrollY = this.doc.defaultView?.scrollY ?? 0;
+
     body.style.overflow = 'hidden';
+    body.style.position = 'fixed';
+    body.style.top = `-${this.scrollY}px`;
+    body.style.width = '100%';
   }
 
   private unlockBodyScroll(): void {
@@ -151,5 +163,10 @@ export class FeaturedProjectsPage implements OnDestroy {
     }
 
     body.style.overflow = this.previousBodyOverflow;
+    body.style.position = this.previousBodyPosition;
+    body.style.top = this.previousBodyTop;
+    body.style.width = this.previousBodyWidth;
+
+    this.doc.defaultView?.scrollTo(0, this.scrollY);
   }
 }

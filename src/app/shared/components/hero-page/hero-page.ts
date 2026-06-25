@@ -9,6 +9,7 @@ import { Component, signal } from '@angular/core';
 export class HeroPage {
   isEnglish = signal(true);
   isHovered = signal(false);
+  isMenuOpen = signal(false);
 
   get clickMeImageSrc(): string {
     const lang = this.isEnglish() ? 'english' : 'deutsch';
@@ -28,8 +29,17 @@ export class HeroPage {
     this.isHovered.set(false);
   }
 
+  toggleMenu(): void {
+    this.isMenuOpen.update(value => !value);
+  }
+
+  closeMenu(): void {
+    this.isMenuOpen.set(false);
+  }
+
   scrollToSection(sectionId: string, event: Event): void {
     event.preventDefault();
+    this.closeMenu();
     document.getElementById(sectionId)?.scrollIntoView({
       behavior: 'smooth',
       block: 'start',

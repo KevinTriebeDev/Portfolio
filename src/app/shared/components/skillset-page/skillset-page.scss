@@ -102,15 +102,19 @@
 }
 
 .skillset-grid {
-    position: absolute;
-    top: 10px;
-    left: calc(100% + 100px);
-    width: 650px;
-    height: 430px;
+    width: 520px;
+    min-height: 500px;
     display: grid;
-    grid-template-columns: repeat(4, minmax(96px, 1fr));
-    column-gap: 44px;
-    row-gap: 44px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(4, minmax(0, 1fr));
+    column-gap: 18px;
+    row-gap: 24px;
+    align-items: center;
+}
+
+.skillset-spacer {
+    display: block;
+    visibility: hidden;
 }
 
 .skillset-item {
@@ -226,4 +230,230 @@
     visibility: visible;
 }
 
+@media (min-width: 769px) {
+    .ssp {
+        min-height: 760px;
+    }
 
+    .ssp .container {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        column-gap: 80px;
+        row-gap: 40px;
+        padding-inline: 48px;
+        min-height: 640px;
+    }
+
+    .ssp > .container > .skillset-title {
+        grid-column: 1 / -1;
+    }
+
+    .skillset-card {
+        width: min(100%, 490px);
+        min-height: 420px;
+        padding: 26px 26px 24px;
+        justify-self: start;
+    }
+
+    .skillset-card > .skillset-title {
+        font-size: clamp(46px, 4.8vw, 58px);
+        margin-bottom: 22px;
+    }
+
+    .skillset-card > p:first-of-type {
+        font-size: 16px;
+        margin-bottom: 22px;
+    }
+
+    .skill-category-title {
+        font-size: 20px;
+    }
+
+    .skillset-card > p:last-of-type {
+        font-size: 14px;
+        margin-bottom: 18px;
+    }
+
+    .skillset-card button {
+        padding: 16px 24px;
+        font-size: 15px;
+    }
+
+    .skillset-grid {
+        width: min(100%, 540px);
+        min-height: 420px;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-rows: repeat(4, minmax(0, 1fr));
+        column-gap: 14px;
+        row-gap: 18px;
+        justify-self: end;
+    }
+
+    .skillset-item img {
+        width: 56px;
+        height: 56px;
+    }
+
+    .skillset-item span {
+        font-size: 15px;
+    }
+
+    .tooltip-bubble {
+        width: 180px;
+        min-height: 118px;
+        padding: 10px;
+    }
+
+    .tooltip-bubble p {
+        font-size: 14px;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+    .ssp .container {
+        display: flex;
+        flex-direction: column;
+        padding-inline: 20px;
+        padding-top: 40px;
+    }
+
+    .skillset-card {
+        width: 100%;
+        min-height: 400px;
+        padding: 24px 24px 20px;
+    }
+
+    .skillset-card > .skillset-title {
+        font-size: 48px;
+        margin-bottom: 20px;
+    }
+
+    .skillset-card > p:first-of-type {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .skillset-grid {
+        position: static;
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 18px;
+        row-gap: 18px;
+        margin-top: 30px;
+    }
+
+    .skillset-spacer {
+        display: none;
+    }
+
+    .skillset-grid img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .tooltip-bubble {
+        left: 50%;
+        bottom: calc(100% + 6px);
+        width: min(150px, calc(100vw - 40px));
+        min-height: 88px;
+        padding: 8px 10px;
+        transform: translateX(-50%);
+    }
+
+    .tooltip-bubble::after {
+        left: 50%;
+    }
+
+    .tooltip-bubble p {
+        font-size: 13px;
+    }
+
+    .tooltip-images {
+        gap: 10px;
+    }
+
+    .tooltip-image-item img {
+        width: 26px;
+        height: 26px;
+    }
+
+    .tooltip-image-item span {
+        font-size: 10px;
+    }
+
+    .skillset-item {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 320px) {
+    .ssp .container {
+        padding-inline: 16px;
+        padding-top: 32px;
+    }
+
+    .skillset-card {
+        padding: 20px 18px 18px;
+    }
+
+    .skillset-card > .skillset-title {
+        font-size: 42px;
+    }
+
+    .skillset-card > p:first-of-type,
+    .skillset-card > p:last-of-type {
+        font-size: 15px;
+    }
+
+    .skill-category-title {
+        font-size: 20px;
+    }
+
+    .skillset-grid {
+        column-gap: 14px;
+        row-gap: 14px;
+        margin-top: 24px;
+    }
+
+    .skillset-spacer {
+        display: none;
+    }
+
+    .skillset-grid img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .skillset-item span {
+        font-size: 14px;
+    }
+
+    .tooltip-bubble {
+        width: min(138px, calc(100vw - 32px));
+        min-height: 82px;
+        padding: 7px 8px;
+    }
+
+    .tooltip-bubble p {
+        font-size: 12px;
+    }
+
+    .tooltip-images {
+        gap: 8px;
+    }
+
+    .tooltip-image-item img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .tooltip-image-item span {
+        font-size: 9px;
+    }
+
+}

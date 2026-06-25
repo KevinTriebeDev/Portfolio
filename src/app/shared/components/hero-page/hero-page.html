@@ -14,4 +14,32 @@
         <a class="hero-logo-link" href="#" aria-label="Back to top">
       <img class="hero-logo" src="/assets/img/krt_logo_big.png" alt="Hero Image">
         </a>
+          <div class="hero-mobile-bar">
+            <a class="hero-mobile-logo-link" href="#" aria-label="Back to top">
+              <img class="hero-mobile-logo" src="/assets/img/krt_logo_smal.png" alt="Logo">
+            </a>
+            <button
+              class="hero-burger-button"
+              type="button"
+              aria-label="Open menu"
+              [attr.aria-expanded]="isMenuOpen()"
+              aria-controls="hero-mobile-menu"
+              (click)="toggleMenu()">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+          <nav id="hero-mobile-menu" class="hero-mobile-menu" [class.hero-mobile-menu--open]="isMenuOpen()" aria-label="Mobile navigation">
+            <a href="#about-me" (click)="scrollToSection('about-me', $event)">About me</a>
+            <a href="#skills" (click)="scrollToSection('skills', $event)">Skills</a>
+            <a href="#featured-projects" (click)="scrollToSection('featured-projects', $event)">Projects</a>
+            <button
+              class="hero-language-toggle"
+              type="button"
+              (click)="toggleLanguage()">
+              <span [class.is-active]="isEnglish()">EN</span>
+              <span [class.is-active]="!isEnglish()">DE</span>
+            </button>
+          </nav>
 </div>

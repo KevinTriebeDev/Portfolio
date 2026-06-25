@@ -220,7 +220,7 @@
 }
 
 .fpp-dialog__title {
-    margin: 4px 0 26px;
+    margin: 8px 0 26px;
     font-size: 64px;
     line-height: 0.92;
     letter-spacing: 0.01em;
@@ -381,5 +381,152 @@
     .fpp__technologies {
         justify-content: flex-start;
         max-width: 100%;
+    }
+
+    .fpp-dialog-backdrop {
+        padding: 12px;
+        align-items: flex-start;
+        overscroll-behavior: contain;
+    }
+
+    .fpp-dialog {
+        width: 100%;
+        max-width: 100%;
+        border-radius: 22px;
+        padding: 56px 18px 56px;
+    }
+
+    .fpp-dialog__close {
+        top: 18px;
+        right: 16px;
+        font-size: 32px;
+    }
+
+    .fpp-dialog__content {
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+        padding-bottom: 24px;
+    }
+
+    .fpp-dialog__right {
+        order: -1;
+    }
+
+    .fpp-dialog__image {
+        max-height: 230px;
+        border-radius: 18px;
+        margin-top: 10px;
+    }
+
+    .fpp-dialog__number {
+        font-size: clamp(64px, 16vw, 92px);
+        line-height: 0.88;
+    }
+
+    .fpp-dialog__title {
+        margin: 8px 0 18px;
+        font-size: clamp(46px, 11vw, 64px);
+        line-height: 0.92;
+    }
+
+    .fpp-dialog__subtitle {
+        margin-bottom: 10px;
+        font-size: 20px;
+    }
+
+    .fpp-dialog__description {
+        max-width: 100%;
+        font-size: 16px;
+        line-height: 1.35;
+        margin-bottom: 16px;
+    }
+
+    .fpp-dialog__stack {
+        gap: 10px;
+        margin-bottom: 22px;
+    }
+
+    .fpp-dialog__tech-item {
+        font-size: 14px;
+        gap: 6px;
+    }
+
+    .fpp-dialog__tech-item img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .fpp-dialog__actions {
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-bottom: 0;
+    }
+
+    .fpp-dialog__action-link {
+        min-height: 44px;
+        padding: 10px 18px;
+        font-size: 15px;
+    }
+
+    .fpp-dialog__next {
+        right: 16px;
+        bottom: 18px;
+        font-size: 18px;
+    }
+
+    .fpp-dialog__next span {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 420px) {
+    .fpp-dialog-backdrop {
+        padding: 8px;
+    }
+
+    .fpp-dialog {
+        padding: 50px 16px 50px;
+        border-radius: 20px;
+    }
+
+    .fpp-dialog__close {
+        top: 16px;
+        right: 12px;
+    }
+
+    .fpp-dialog__image {
+        max-height: 200px;
+        margin-top: 8px;
+    }
+
+    .fpp-dialog__number {
+        font-size: 60px;
+    }
+
+    .fpp-dialog__title {
+        font-size: 42px;
+        margin: 8px 0 14px;
+    }
+
+    .fpp-dialog__subtitle {
+        font-size: 18px;
+    }
+
+    .fpp-dialog__description {
+        font-size: 15px;
+    }
+
+    .fpp-dialog__action-link {
+        width: calc(50% - 6px);
+        justify-content: center;
+    }
+
+    .fpp-dialog__actions {
+        margin-bottom: 0;
+    }
+
+    .fpp-dialog__next {
+        bottom: 16px;
     }
 }
