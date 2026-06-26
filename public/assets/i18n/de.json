@@ -1,0 +1,139 @@
+{
+  "HERO": {
+    "NAV_ABOUT": "Über mich",
+    "NAV_SKILLS": "Skills",
+    "NAV_PROJECTS": "Projekte",
+    "LANG_EN": "EN",
+    "LANG_DE": "DE"
+  },
+  "HEADER": {
+    "ROLE": "Fullstack Entwickler",
+    "BUTTON_WORK": "Meine Projekte",
+    "BUTTON_CONTACT": "Kontakt",
+    "BANNER_ROLE": "Fullstack Entwickler",
+    "BANNER_LOCATION": "Standort Lößnitz (SN)",
+    "BANNER_REMOTE": "Verfügbar für Remote Arbeit",
+    "BANNER_OPEN": "Offen fuer neue Projekte"
+  },
+  "ABOUT": {
+    "WHO": "Wer ich bin",
+    "TITLE": "Über mich",
+    "INTRO": "Hallo, ich bin Kevin! Frontend Entwicklung begeistert mich, weil ich Ideen in interaktive und benutzerfreundliche Erlebnisse verwandeln kann. Ich verbessere meine Skills laufend durch Projekte, moderne Frameworks und neue technische Ansätze.",
+    "DETAIL_LOCATION": "Ich komme aus Lößnitz in Deutschland und bin offen für Remote Arbeit.",
+    "DETAIL_OPEN": "Ich bin offen für Neues und motiviert, laufend neue Technologien zu lernen und meine Fähigkeiten zu verbessern.",
+    "DETAIL_SOLVE": "Ich löse Probleme mit analytischem Denken, Kreativität und Ausdauer und arbeite dabei eng mit anderen zusammen, um effiziente Lösungen zu entwickeln."
+  },
+  "SKILLS": {
+    "TECHNOLOGIES": "Technologien",
+    "TITLE": "Skill Set",
+    "INTRO": "Kurze Einführung in deine Skills. Hebe deine Erfahrung mit verschiedenen Frontend Technologien hervor und betone deine Offenheit, neue Technologien zu lernen.",
+    "NEED": "Du brauchst?",
+    "ANOTHER": "noch einen Skill?",
+    "CONTACT": "Melde dich gerne bei mir. Ich freue mich darauf, mein Wissen weiter auszubauen.",
+    "LETS_TALK": "Lass uns sprechen",
+    "GROWTH": "Growth Mindset",
+    "GROWTH_TOOLTIP": "Ich habe ein besonderes Interesse am Lernen"
+  },
+  "FEATURED": {
+    "EYEBROW": "Portfolio",
+    "TITLE": "Ausgewählte Projekte",
+    "DESCRIPTION": "Entdecke hier eine Auswahl meiner Arbeiten und sieh meine Skills in Aktion.",
+    "CLOSE_DIALOG": "Dialog schliessen",
+    "DIALOG_SUBTITLE": "Worum geht es in diesem Projekt?",
+    "GITHUB": "GitHub",
+    "LIVE_TEST": "Live Test",
+    "NEXT": "Nächstes Projekt"
+  },
+  "REVIEWS": {
+    "TITLE": "Was Kolleginnen und Kollegen über mich sagen",
+    "ITEM_1": {
+      "QUOTE": "Simon hat mit Lukas in einem Gruppenprojekt gearbeitet und seinen fokussierten, proaktiven Stil und seine starke Umsetzung hervorgehoben.",
+      "ROLE": "Team Partner"
+    },
+    "ITEM_2": {
+      "QUOTE": "Unser Projekt hat enorm von Simons effizienter Arbeitsweise profitiert.",
+      "ROLE": "Frontend Entwickler"
+    },
+    "ITEM_3": {
+      "QUOTE": "Lukas hat sich als zuverlässiger Teamkollege mit soliden technischen Fähigkeiten und einem proaktiven Ansatz für den Projekterfolg erwiesen.",
+      "ROLE": "Projektleitung"
+    },
+    "PREVIOUS": "Vorherige Bewertung",
+    "SLIDES": "Bewertungsfolien",
+    "NEXT": "Nächste Bewertung"
+  },
+  "LAST_WORK": {
+    "SECTION_LABEL": "Kontakt",
+    "TITLE": "Lass uns reden",
+    "SUBTITLE": "Du hast ein Problem zu loesen?",
+    "DESCRIPTION_1": "Beschreibe, woran du arbeitest und welche Rolle du besetzen möchtest.",
+    "DESCRIPTION_2": "Ich zeige dir gerne, wie ich mit meiner Arbeit Mehrwert für dein Projekt schaffen kann.",
+    "CTA_PREFIX": "Du brauchst einen Frontend Entwickler?",
+    "CTA_HIGHLIGHT": "Lass uns sprechen!",
+    "LABEL_NAME": "Wie heißt du?",
+    "LABEL_EMAIL": "Wie lautet deine E-Mail?",
+    "LABEL_HELP": "Wobei kann ich dir helfen?",
+    "PLACEHOLDER_NAME": "Dein Name",
+    "PLACEHOLDER_EMAIL": "deinemail@email.com",
+    "PLACEHOLDER_HELP": "Hallo, ich interessiere mich für...",
+    "ERROR_NAME": "Bitte gib deinen Namen ein.",
+    "ERROR_EMAIL": "Bitte gib deine E-Mail ein.",
+    "ERROR_HELP": "Bitte sag mir, wobei ich helfen kann.",
+    "ERROR_PRIVACY": "Bitte akzeptiere die Datenschutzerklärung.",
+    "PRIVACY_TEXT_BEFORE": "Ich habe die",
+    "PRIVACY_LINK": "Datenschutzerklärung",
+    "PRIVACY_TEXT_AFTER": "gelesen und stimme der Verarbeitung meiner Daten zu.",
+    "SUBMIT": "Nachricht senden :)"
+  },
+  "FOOTER": {
+    "ROLE": "Web Entwickler",
+    "LOCATION": "Lößnitz Deutschland",
+    "GITHUB": "Github",
+    "LINKEDIN": "LinkedIn",
+    "EMAIL": "E-Mail",
+    "LEGAL_NOTICE": "Impressum",
+    "PRIVACY_POLICY": "Datenschutz"
+  },
+  "IMPRINT": {
+    "TITLE": "Impressum",
+    "HEAD_IMPRINT": "Angaben gemäß 5 TMG",
+    "HEAD_CONTACT": "Kontakt",
+    "HEAD_ACCEPTANCE": "Akzeptanz der Bedingungen",
+    "ACCEPTANCE_TEXT": "Mit dem Zugriff auf dieses Portfolio erkennst du die folgenden Bedingungen sowie gültige Richtlinien an. Diese Bedingungen können jederzeit ohne vorherige Ankündigung aktualisiert werden.",
+    "HEAD_SCOPE": "Geltungsbereich und Eigentum",
+    "SCOPE_TEXT_1": "Dieses Portfolio wurde im Rahmen eines Ausbildungsprojekts in einem Webentwicklung Bootcamp erstellt und dient zu Lernzwecken.",
+    "SCOPE_TEXT_2": "Eine unbefugte Nutzung, Vervielfältigung, Änderung oder Weiterverbreitung des Designs ist nicht erlaubt.",
+    "HEAD_RIGHTS": "Urheberrechte",
+    "RIGHTS_TEXT": "Alle Projektinhalte, ausgenommen Drittanbieter Materialien, verbleiben im geistigen Eigentum des Portfolio Inhabers.",
+    "HEAD_USE": "Nutzung des Produkts",
+    "USE_TEXT": "Dieses Portfolio darf nur zu rechtmäßigen Zwecken und unter Einhaltung der geltenden Gesetze verwendet werden.",
+    "HEAD_DISCLAIMER": "Haftungsausschluss",
+    "DISCLAIMER_TEXT": "Dieses Portfolio wird ohne Gewähr bereitgestellt. Eine Haftung für direkte oder indirekte Schäden ist, soweit gesetzlich zulässig, ausgeschlossen.",
+    "HEAD_INDEMNITY": "Freistellung",
+    "INDEMNITY_TEXT": "Durch die Nutzung dieses Portfolios verpflichtest du dich, den Inhaber von Ansprüchen freizustellen, die aus Missbrauch oder Verstößen gegen diese Bedingungen entstehen.",
+    "CONTACT_TEXT": "Bei Fragen oder Hinweisen kontaktiere mich unter kevintriebe2025@gmail.com.",
+    "DATE_TEXT": "Datum: 26. Juli 2026"
+  },
+  "PRIVACY": {
+    "TITLE": "Datenschutzerklärung",
+    "HEAD_OVERVIEW": "Übersicht",
+    "OVERVIEW_TEXT": "Diese Datenschutzerklärung erklärt, welche personenbezogenen Daten auf dieser Website verarbeitet werden und zu welchem Zweck.",
+    "HEAD_CONTROLLER": "Verantwortliche Stelle",
+    "CONTROLLER_NAME": "Kevin Reinhold Triebe",
+    "CONTROLLER_ADDRESS": "Johannisstraße 60",
+    "CONTROLLER_CITY": "08294 Lößnitz",
+    "CONTROLLER_EMAIL": "E-Mail: kevintriebe2025@gmail.com",
+    "HEAD_DATA": "Welche Daten verarbeitet werden",
+    "DATA_TEXT": "Bei Nutzung des Kontaktformulars können dein Name, deine E-Mail-Adresse und deine Nachricht verarbeitet werden, um deine Anfrage zu bearbeiten.",
+    "HEAD_PURPOSE": "Zweck der Verarbeitung",
+    "PURPOSE_TEXT": "Die Datenverarbeitung erfolgt ausschließlich zur Beantwortung deiner Anfrage und zur Kommunikation bezüglich deines Anliegens.",
+    "HEAD_STORAGE": "Speicherdauer",
+    "STORAGE_TEXT": "Personenbezogene Daten werden nur so lange gespeichert, wie es für die Bearbeitung deiner Anfrage oder gesetzliche Pflichten erforderlich ist.",
+    "HEAD_RIGHTS": "Deine Rechte",
+    "RIGHTS_TEXT": "Du hast nach geltendem Recht das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung und Widerspruch gegen die Verarbeitung deiner personenbezogenen Daten.",
+    "HEAD_SECURITY": "Sicherheit",
+    "SECURITY_TEXT": "Es werden angemessene technische und organisatorische Maßnahmen eingesetzt, um deine Daten vor unbefugtem Zugriff und Missbrauch zu schützen.",
+    "CONTACT_TEXT": "Bei Fragen zum Datenschutz kontaktiere: kevintriebe2025@gmail.com.",
+    "DATE_TEXT": "Datum: 26. Juli 2026"
+  }
+}

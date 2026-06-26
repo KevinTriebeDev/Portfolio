@@ -1,32 +1,24 @@
 import { Component, signal } from '@angular/core';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-hero-page',
-  imports: [],
+  imports: [TranslatePipe],
   templateUrl: './hero-page.html',
   styleUrl: './hero-page.scss',
 })
 export class HeroPage {
   isEnglish = signal(true);
-  isHovered = signal(false);
   isMenuOpen = signal(false);
 
-  get clickMeImageSrc(): string {
-    const lang = this.isEnglish() ? 'english' : 'deutsch';
-    const state = this.isHovered() ? '_hover' : '';
-    return `/assets/img/${lang}${state}.svg`;
+  constructor(private readonly translate: TranslateService) {
+    this.isEnglish.set(this.translate.getCurrentLang() !== 'de');
   }
 
   toggleLanguage(): void {
-    this.isEnglish.update(value => !value);
-  }
-
-  onHoverStart(): void {
-    this.isHovered.set(true);
-  }
-
-  onHoverEnd(): void {
-    this.isHovered.set(false);
+    const nextLang = this.isEnglish() ? 'de' : 'en';
+    this.translate.use(nextLang);
+    this.isEnglish.set(nextLang === 'en');
   }
 
   toggleMenu(): void {

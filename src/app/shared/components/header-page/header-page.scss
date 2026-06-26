@@ -135,7 +135,7 @@
   transition: color 0.2s ease;
 }
 
-.contact-email-icon {
+.contact-widget > .contact-email-icon {
   display: none;
 }
 
@@ -331,7 +331,7 @@
     display: none;
   }
 
-  .contact-email-icon {
+  .contact-widget > .contact-email-icon {
     display: inline-flex;
   }
 

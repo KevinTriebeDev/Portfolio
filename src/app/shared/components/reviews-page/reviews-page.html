@@ -1,6 +1,6 @@
 <div class="rp">
   <div class="container">
-    <h2 class="rp__title">What my colleagues say about me</h2>
+    <h2 class="rp__title">{{ 'REVIEWS.TITLE' | translate }}</h2>
 
     <div class="rp__viewport">
       <img
@@ -17,11 +17,11 @@
         @for (testimonial of displayTestimonials; track $index; let index = $index) {
           <article class="rp__slide" [class.rp__slide--active]="index === visualIndex">
             <div class="rp__card">
-              <p class="rp__text">{{ testimonial.quote }}</p>
+              <p class="rp__text">{{ testimonial.quoteKey | translate }}</p>
 
               <div class="rp__author-row">
                 <span class="rp__author-line"></span>
-                <p class="rp__author">{{ testimonial.author }} - {{ testimonial.role }}</p>
+                <p class="rp__author">{{ testimonial.author }} - {{ testimonial.roleKey | translate }}</p>
               </div>
             </div>
           </article>
@@ -36,14 +36,14 @@
         (click)="prev()"
         (mouseenter)="prevHovered = true"
         (mouseleave)="prevHovered = false"
-        aria-label="Previous review">
+        [attr.aria-label]="'REVIEWS.PREVIOUS' | translate">
         <img
           class="rp__arrow rp__arrow--left"
           [src]="prevHovered ? arrowHover : arrowDefault"
           alt="">
       </button>
 
-      <div class="rp__dots" role="tablist" aria-label="Review slides">
+      <div class="rp__dots" role="tablist" [attr.aria-label]="'REVIEWS.SLIDES' | translate">
         @for (testimonial of testimonials; track testimonial.author; let index = $index) {
           <span
             class="rp__dot"
@@ -62,7 +62,7 @@
         (click)="next()"
         (mouseenter)="nextHovered = true"
         (mouseleave)="nextHovered = false"
-        aria-label="Next review">
+        [attr.aria-label]="'REVIEWS.NEXT' | translate">
         <img class="rp__arrow" [src]="nextHovered ? arrowHover : arrowDefault" alt="">
       </button>
     </div>

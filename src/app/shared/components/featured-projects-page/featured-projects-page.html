@@ -1,9 +1,9 @@
 <div class="fpp" id="featured-projects">
   <div class="container">
     <div class="fpp__intro">
-      <h3 class="fpp__eyebrow">Portfolio</h3>
-      <h2 class="fpp__title">Featured Projects</h2>
-      <p class="fpp__description">Explore a selection of my work here - Interact with projects to see my skills in action.</p>
+      <h3 class="fpp__eyebrow">{{ 'FEATURED.EYEBROW' | translate }}</h3>
+      <h2 class="fpp__title">{{ 'FEATURED.TITLE' | translate }}</h2>
+      <p class="fpp__description">{{ 'FEATURED.DESCRIPTION' | translate }}</p>
     </div>
 
     <div class="fpp__content" (mouseleave)="clearHoveredProject()">
@@ -56,13 +56,13 @@
   @if (activeDialogIndex !== null) {
     <div class="fpp-dialog-backdrop" (click)="onDialogBackdropClick($event)">
       <article class="fpp-dialog">
-        <button class="fpp-dialog__close" type="button" (click)="closeProjectDialog()" aria-label="Close dialog">×</button>
+        <button class="fpp-dialog__close" type="button" (click)="closeProjectDialog()" [attr.aria-label]="'FEATURED.CLOSE_DIALOG' | translate">×</button>
 
         <div class="fpp-dialog__content">
           <div class="fpp-dialog__left">
             <p class="fpp-dialog__number">{{ projects[activeDialogIndex].number }}</p>
             <h3 class="fpp-dialog__title">{{ projects[activeDialogIndex].headline }}</h3>
-            <h4 class="fpp-dialog__subtitle">What is this project about?</h4>
+            <h4 class="fpp-dialog__subtitle">{{ 'FEATURED.DIALOG_SUBTITLE' | translate }}</h4>
             <p class="fpp-dialog__description">{{ projects[activeDialogIndex].description }}</p>
 
             <div class="fpp-dialog__stack">
@@ -76,10 +76,10 @@
 
             <div class="fpp-dialog__actions">
               <a [href]="projects[activeDialogIndex].githubUrl" class="fpp-dialog__action-link" target="_blank" rel="noopener noreferrer">
-                GitHub <span>↗</span>
+                {{ 'FEATURED.GITHUB' | translate }} <span>↗</span>
               </a>
               <a [href]="projects[activeDialogIndex].liveUrl" class="fpp-dialog__action-link" target="_blank" rel="noopener noreferrer">
-                Live Test <span>↗</span>
+                {{ 'FEATURED.LIVE_TEST' | translate }} <span>↗</span>
               </a>
             </div>
           </div>
@@ -93,7 +93,7 @@
         </div>
 
         <button type="button" class="fpp-dialog__next" (click)="openNextProject()">
-          Next project <span>→</span>
+          {{ 'FEATURED.NEXT' | translate }} <span>→</span>
         </button>
       </article>
     </div>

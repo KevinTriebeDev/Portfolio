@@ -1,15 +1,16 @@
 <div class="hero-wrapper">
 <div class="hero-page">
         <div class="menu-hero">
-            <button class="click-me-button" 
-                    (click)="toggleLanguage()"
-                    (mouseenter)="onHoverStart()"
-                    (mouseleave)="onHoverEnd()">
-                <img [src]="clickMeImageSrc" alt="Click Me">
+            <button
+              class="hero-language-toggle"
+              type="button"
+              (click)="toggleLanguage()">
+              <span [class.is-active]="isEnglish()">{{ 'HERO.LANG_EN' | translate }}</span>
+              <span [class.is-active]="!isEnglish()">{{ 'HERO.LANG_DE' | translate }}</span>
             </button>
-            <a href="#about-me" (click)="scrollToSection('about-me', $event)">About me</a>
-            <a href="#skills" (click)="scrollToSection('skills', $event)">Skills</a>
-            <a href="#featured-projects" (click)="scrollToSection('featured-projects', $event)">Projects</a>
+            <a href="#about-me" (click)="scrollToSection('about-me', $event)">{{ 'HERO.NAV_ABOUT' | translate }}</a>
+            <a href="#skills" (click)="scrollToSection('skills', $event)">{{ 'HERO.NAV_SKILLS' | translate }}</a>
+            <a href="#featured-projects" (click)="scrollToSection('featured-projects', $event)">{{ 'HERO.NAV_PROJECTS' | translate }}</a>
         </div>
         <a class="hero-logo-link" href="#" aria-label="Back to top">
       <img class="hero-logo" src="/assets/img/krt_logo_big.png" alt="Hero Image">
@@ -31,15 +32,15 @@
             </button>
           </div>
           <nav id="hero-mobile-menu" class="hero-mobile-menu" [class.hero-mobile-menu--open]="isMenuOpen()" aria-label="Mobile navigation">
-            <a href="#about-me" (click)="scrollToSection('about-me', $event)">About me</a>
-            <a href="#skills" (click)="scrollToSection('skills', $event)">Skills</a>
-            <a href="#featured-projects" (click)="scrollToSection('featured-projects', $event)">Projects</a>
+            <a href="#about-me" (click)="scrollToSection('about-me', $event)">{{ 'HERO.NAV_ABOUT' | translate }}</a>
+            <a href="#skills" (click)="scrollToSection('skills', $event)">{{ 'HERO.NAV_SKILLS' | translate }}</a>
+            <a href="#featured-projects" (click)="scrollToSection('featured-projects', $event)">{{ 'HERO.NAV_PROJECTS' | translate }}</a>
             <button
               class="hero-language-toggle"
               type="button"
               (click)="toggleLanguage()">
-              <span [class.is-active]="isEnglish()">EN</span>
-              <span [class.is-active]="!isEnglish()">DE</span>
+              <span [class.is-active]="isEnglish()">{{ 'HERO.LANG_EN' | translate }}</span>
+              <span [class.is-active]="!isEnglish()">{{ 'HERO.LANG_DE' | translate }}</span>
             </button>
           </nav>
 </div>

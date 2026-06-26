@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-last-work-page',
-  imports: [],
+  imports: [RouterLink, TranslatePipe],
   templateUrl: './last-work-page.html',
   styleUrl: './last-work-page.scss',
 })
@@ -14,32 +16,34 @@ export class LastWorkPage {
   submitted = false;
   checkboxHovered = false;
 
+  constructor(private readonly translate: TranslateService) {}
+
   get nameError(): string {
-    return this.submitted && !this.name.trim() ? 'Please enter your name.' : '';
+    return this.submitted && !this.name.trim() ? this.translate.instant('LAST_WORK.ERROR_NAME') : '';
   }
 
   get emailError(): string {
-    return this.submitted && !this.email.trim() ? 'Please enter your email.' : '';
+    return this.submitted && !this.email.trim() ? this.translate.instant('LAST_WORK.ERROR_EMAIL') : '';
   }
 
   get helpError(): string {
-    return this.submitted && !this.helpMessage.trim() ? 'Please tell me how I can help.' : '';
+    return this.submitted && !this.helpMessage.trim() ? this.translate.instant('LAST_WORK.ERROR_HELP') : '';
   }
 
   get privacyError(): string {
-    return this.submitted && !this.privacyAccepted ? 'Please accept the privacy policy.' : '';
+    return this.submitted && !this.privacyAccepted ? this.translate.instant('LAST_WORK.ERROR_PRIVACY') : '';
   }
 
   get namePlaceholder(): string {
-    return this.nameError || 'Your name goes here';
+    return this.nameError || this.translate.instant('LAST_WORK.PLACEHOLDER_NAME');
   }
 
   get emailPlaceholder(): string {
-    return this.emailError || 'youremail@email.com';
+    return this.emailError || this.translate.instant('LAST_WORK.PLACEHOLDER_EMAIL');
   }
 
   get helpPlaceholder(): string {
-    return this.helpError || 'Hello, I am interested in...';
+    return this.helpError || this.translate.instant('LAST_WORK.PLACEHOLDER_HELP');
   }
 
   get checkboxIcon(): string {

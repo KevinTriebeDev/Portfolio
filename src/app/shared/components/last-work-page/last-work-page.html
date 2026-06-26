@@ -1,19 +1,19 @@
-<div class="lwp">
+<div class="lwp" id="lets-work">
   <div class="container">
     <div class="contact-copy">
-      <p class="section-label">Contact me</p>
-      <h2>Let's work together</h2>
-      <h3>Got a problem to solve?</h3>
+      <p class="section-label">{{ 'LAST_WORK.SECTION_LABEL' | translate }}</p>
+      <h2>{{ 'LAST_WORK.TITLE' | translate }}</h2>
+      <h3>{{ 'LAST_WORK.SUBTITLE' | translate }}</h3>
       <p class="description">
-        Encourage people to contact you and describe what role you are interested in.
-        Show that you will add value to their projects through your work.
+        {{ 'LAST_WORK.DESCRIPTION_1' | translate }}
+        {{ 'LAST_WORK.DESCRIPTION_2' | translate }}
       </p>
-      <p class="cta">Need a Frontend developer? <span>Let's talk!</span></p>
+      <p class="cta">{{ 'LAST_WORK.CTA_PREFIX' | translate }} <span>{{ 'LAST_WORK.CTA_HIGHLIGHT' | translate }}</span></p>
     </div>
 
     <form class="contact-form" novalidate (submit)="onSubmit($event)">
       <div class="form-field">
-        <label for="contactName">What's your name?</label>
+        <label for="contactName">{{ 'LAST_WORK.LABEL_NAME' | translate }}</label>
         <input
           id="contactName"
           type="text"
@@ -25,7 +25,7 @@
       </div>
 
       <div class="form-field">
-        <label for="contactEmail">What's your email?</label>
+        <label for="contactEmail">{{ 'LAST_WORK.LABEL_EMAIL' | translate }}</label>
         <input
           id="contactEmail"
           type="email"
@@ -37,7 +37,7 @@
       </div>
 
       <div class="form-field">
-        <label for="contactMessage">How can I help you?</label>
+        <label for="contactMessage">{{ 'LAST_WORK.LABEL_HELP' | translate }}</label>
         <textarea
           id="contactMessage"
           [value]="helpMessage"
@@ -61,16 +61,16 @@
           >
         </button>
         <p>
-          I've read the
-          <a href="#" class="privacy-link">privacy policy</a>
-          and agree to the processing of my data as outlined.
+          {{ 'LAST_WORK.PRIVACY_TEXT_BEFORE' | translate }}
+          <a routerLink="/privacy-policy" class="privacy-link">{{ 'LAST_WORK.PRIVACY_LINK' | translate }}</a>
+          {{ 'LAST_WORK.PRIVACY_TEXT_AFTER' | translate }}
         </p>
       </div>
       <div class="consent-error-slot">
         <span class="consent-error">{{ privacyError }}</span>
       </div>
 
-      <button type="submit" class="submit-button"><span>Say Hello :)</span></button>
+      <button type="submit" class="submit-button"><span>{{ 'LAST_WORK.SUBMIT' | translate }}</span></button>
     </form>
   </div>
 </div>

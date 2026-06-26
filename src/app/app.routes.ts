@@ -7,6 +7,7 @@ import { ReviewsPage } from './shared/components/reviews-page/reviews-page';
 import { FeaturedProjectsPage } from './shared/components/featured-projects-page/featured-projects-page';
 import { SkillsetPage } from './shared/components/skillset-page/skillset-page';
 import { ImprintPage } from './shared/components/imprint-page/imprint-page';
+import { PrivacyPolicyPage } from './shared/components/privacy-policy-page/privacy-policy-page';
 
 export const routes: Routes = [
     {path: '', pathMatch: 'full', component: MainPage},
@@ -18,4 +19,5 @@ export const routes: Routes = [
     {path: 'reviews', component: ReviewsPage},
     {path: 'last-work', component: LastWorkPage},
     {path: 'imprint', component: ImprintPage},
+    {path: 'privacy-policy', component: PrivacyPolicyPage},
 ];

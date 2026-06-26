@@ -1,0 +1,139 @@
+{
+  "HERO": {
+    "NAV_ABOUT": "About me",
+    "NAV_SKILLS": "Skills",
+    "NAV_PROJECTS": "Projects",
+    "LANG_EN": "EN",
+    "LANG_DE": "DE"
+  },
+  "HEADER": {
+    "ROLE": "Fullstack Developer",
+    "BUTTON_WORK": "Check my work",
+    "BUTTON_CONTACT": "Contact me",
+    "BANNER_ROLE": "Fullstack Developer",
+    "BANNER_LOCATION": "Based in Loessnitz (SN)",
+    "BANNER_REMOTE": "Available for remote work",
+    "BANNER_OPEN": "Open to work"
+  },
+  "ABOUT": {
+    "WHO": "Who I Am",
+    "TITLE": "About me",
+    "INTRO": "Hey there, I am Kevin! I am passionate about frontend development because I love turning ideas into interactive, user-friendly experiences. I keep improving my skills by building projects, learning modern frameworks and testing new approaches.",
+    "DETAIL_LOCATION": "I am based in Loessnitz, Germany and open to remote work.",
+    "DETAIL_OPEN": "I am open-minded and always motivated to learn new technologies and improve my skills.",
+    "DETAIL_SOLVE": "I solve problems with analytical thinking, creativity and persistence while working closely with others to build efficient solutions."
+  },
+  "SKILLS": {
+    "TECHNOLOGIES": "Technologies",
+    "TITLE": "Skill Set",
+    "INTRO": "A short introduction of your skills. Highlight your experience of using different front-end technologies and emphasise your openness to learning and adapting to new technologies.",
+    "NEED": "You need?",
+    "ANOTHER": "another skill?",
+    "CONTACT": "Feel free to contact me. I look forward to expanding on my previous knowledge.",
+    "LETS_TALK": "Let's Talk",
+    "GROWTH": "Growth Mindset",
+    "GROWTH_TOOLTIP": "I have a special interest in learning"
+  },
+  "FEATURED": {
+    "EYEBROW": "Portfolio",
+    "TITLE": "Featured Projects",
+    "DESCRIPTION": "Explore a selection of my work here - interact with projects to see my skills in action.",
+    "CLOSE_DIALOG": "Close dialog",
+    "DIALOG_SUBTITLE": "What is this project about?",
+    "GITHUB": "GitHub",
+    "LIVE_TEST": "Live Test",
+    "NEXT": "Next project"
+  },
+  "REVIEWS": {
+    "TITLE": "What my colleagues say about me",
+    "ITEM_1": {
+      "QUOTE": "Simon worked with Lukas in a group project and highlighted his focused, proactive style and strong execution.",
+      "ROLE": "Team Partner"
+    },
+    "ITEM_2": {
+      "QUOTE": "Our project benefited enormously from Simon efficient way of working.",
+      "ROLE": "Frontend Developer"
+    },
+    "ITEM_3": {
+      "QUOTE": "Lukas has proven to be a reliable teammate with solid technical skills and a proactive approach to project success.",
+      "ROLE": "Project Lead"
+    },
+    "PREVIOUS": "Previous review",
+    "SLIDES": "Review slides",
+    "NEXT": "Next review"
+  },
+  "LAST_WORK": {
+    "SECTION_LABEL": "Contact me",
+    "TITLE": "Let's work together",
+    "SUBTITLE": "Got a problem to solve?",
+    "DESCRIPTION_1": "Encourage people to contact you and describe what role you are interested in.",
+    "DESCRIPTION_2": "Show that you will add value to their projects through your work.",
+    "CTA_PREFIX": "Need a Frontend developer?",
+    "CTA_HIGHLIGHT": "Let's talk!",
+    "LABEL_NAME": "What's your name?",
+    "LABEL_EMAIL": "What's your email?",
+    "LABEL_HELP": "How can I help you?",
+    "PLACEHOLDER_NAME": "Your name goes here",
+    "PLACEHOLDER_EMAIL": "youremail@email.com",
+    "PLACEHOLDER_HELP": "Hello, I am interested in...",
+    "ERROR_NAME": "Please enter your name.",
+    "ERROR_EMAIL": "Please enter your email.",
+    "ERROR_HELP": "Please tell me how I can help.",
+    "ERROR_PRIVACY": "Please accept the privacy policy.",
+    "PRIVACY_TEXT_BEFORE": "I've read the",
+    "PRIVACY_LINK": "privacy policy",
+    "PRIVACY_TEXT_AFTER": "and agree to the processing of my data as outlined.",
+    "SUBMIT": "Say Hello :)"
+  },
+  "FOOTER": {
+    "ROLE": "Web Developer",
+    "LOCATION": "Loessnitz Germany",
+    "GITHUB": "Github",
+    "LINKEDIN": "LinkedIn",
+    "EMAIL": "Email",
+    "LEGAL_NOTICE": "Legal Notice",
+    "PRIVACY_POLICY": "Privacy Policy"
+  },
+  "IMPRINT": {
+    "TITLE": "Legal Notice",
+    "HEAD_IMPRINT": "Imprint",
+    "HEAD_CONTACT": "Contact",
+    "HEAD_ACCEPTANCE": "Acceptance of terms",
+    "ACCEPTANCE_TEXT": "By accessing and using this Portfolio, you acknowledge and agree to the following terms and conditions and any applicable policies. We may update these terms from time to time without prior notice.",
+    "HEAD_SCOPE": "Scope and ownership of the product",
+    "SCOPE_TEXT_1": "This portfolio has been developed as part of a training project in a web development bootcamp and is intended for educational purposes.",
+    "SCOPE_TEXT_2": "Unauthorized use, reproduction, modification, distribution, or republication of the design is strictly prohibited.",
+    "HEAD_RIGHTS": "Proprietary rights",
+    "RIGHTS_TEXT": "All project content, except third-party assets, remains the intellectual property of the portfolio owner.",
+    "HEAD_USE": "Use of the product",
+    "USE_TEXT": "This portfolio may only be used for lawful purposes and in compliance with all applicable laws and regulations.",
+    "HEAD_DISCLAIMER": "Disclaimer of warranties and limitation of liability",
+    "DISCLAIMER_TEXT": "This portfolio is provided as is without warranties of any kind. Liability for direct or indirect damages is excluded to the extent permitted by law.",
+    "HEAD_INDEMNITY": "Indemnity",
+    "INDEMNITY_TEXT": "By using this portfolio, you agree to indemnify and hold harmless the owner from claims resulting from misuse or breach of these terms.",
+    "CONTACT_TEXT": "For any questions or notices, please contact me at kevintriebe2025@gmail.com.",
+    "DATE_TEXT": "Date: July 26, 2026"
+  },
+  "PRIVACY": {
+    "TITLE": "Privacy Policy",
+    "HEAD_OVERVIEW": "Overview",
+    "OVERVIEW_TEXT": "This privacy policy explains what personal data is processed on this website and for what purpose.",
+    "HEAD_CONTROLLER": "Data controller",
+    "CONTROLLER_NAME": "Kevin Reinhold Triebe",
+    "CONTROLLER_ADDRESS": "Johannisstrasse 60",
+    "CONTROLLER_CITY": "08294 Loessnitz",
+    "CONTROLLER_EMAIL": "Email: kevintriebe2025@gmail.com",
+    "HEAD_DATA": "What data is processed",
+    "DATA_TEXT": "When you use the contact form, your name, email address and message may be processed to handle your request.",
+    "HEAD_PURPOSE": "Purpose of processing",
+    "PURPOSE_TEXT": "The data is processed only to answer your request and provide communication regarding your inquiry.",
+    "HEAD_STORAGE": "Storage duration",
+    "STORAGE_TEXT": "Personal data is stored only as long as necessary to process your request or to comply with legal obligations.",
+    "HEAD_RIGHTS": "Your rights",
+    "RIGHTS_TEXT": "You have the right to access, rectify, erase, restrict processing and object to processing of your personal data according to applicable law.",
+    "HEAD_SECURITY": "Security",
+    "SECURITY_TEXT": "Reasonable technical and organizational measures are used to protect your data from unauthorized access and misuse.",
+    "CONTACT_TEXT": "For privacy-related questions, contact: kevintriebe2025@gmail.com.",
+    "DATE_TEXT": "Date: July 26, 2026"
+  }
+}

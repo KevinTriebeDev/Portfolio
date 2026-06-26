@@ -1,5 +1,6 @@
 import { DOCUMENT } from '@angular/common';
 import { Component, OnDestroy, inject } from '@angular/core';
+import { TranslatePipe } from '@ngx-translate/core';
 
 type ProjectTech = {
   name: string;
@@ -23,7 +24,7 @@ type ProjectItem = {
 
 @Component({
   selector: 'app-featured-projects-page',
-  imports: [],
+  imports: [TranslatePipe],
   templateUrl: './featured-projects-page.html',
   styleUrl: './featured-projects-page.scss',
 })

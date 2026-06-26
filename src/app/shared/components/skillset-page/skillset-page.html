@@ -1,12 +1,12 @@
 <div class="ssp" id="skills">
   <div class="container">
-    <h2 class="skillset-title">Technologies</h2>
+    <h2 class="skillset-title">{{ 'SKILLS.TECHNOLOGIES' | translate }}</h2>
     <div class="skillset-card">
-      <h2 class="skillset-title">Skill Set</h2>
-      <p>A short introduction of your skills. Highlight your experience of  using different front-end technologies and emphasise your openness to learning and adapting to new technologies. Show how important it is for you to keep up with the rapid changes in web development.</p>
-      <h3 class="skill-category-title">You need ?</h3> <h3 class="skill-category-title">another skill?</h3>
-      <p>Feel free to contact me. I look forward to expanding on my previous knowledge.</p>
-      <button><span>Let´s Talk</span></button>
+      <h2 class="skillset-title">{{ 'SKILLS.TITLE' | translate }}</h2>
+      <p>{{ 'SKILLS.INTRO' | translate }}</p>
+      <h3 class="skill-category-title">{{ 'SKILLS.NEED' | translate }}</h3> <h3 class="skill-category-title">{{ 'SKILLS.ANOTHER' | translate }}</h3>
+      <p>{{ 'SKILLS.CONTACT' | translate }}</p>
+      <button type="button" (click)="scrollToLetsWork()"><span>{{ 'SKILLS.LETS_TALK' | translate }}</span></button>
     </div>
     <div class="skillset-grid"> 
       <div class="skillset-item">
@@ -47,9 +47,9 @@
       </div>
       <div class="skillset-item">
         <img src="/assets/img/grothminset_hover.svg" alt="Growth Mindset">
-        <span>Growth Mindset</span>
+        <span>{{ 'SKILLS.GROWTH' | translate }}</span>
         <div class="tooltip-bubble">
-          <p>I have a special interest in learning</p>
+          <p>{{ 'SKILLS.GROWTH_TOOLTIP' | translate }}</p>
           <div class="tooltip-images">
             <div class="tooltip-image-item">
               <img src="/assets/img/React.png" alt="React">

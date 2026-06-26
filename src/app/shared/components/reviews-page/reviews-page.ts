@@ -1,8 +1,15 @@
 import { Component } from '@angular/core';
+import { TranslatePipe } from '@ngx-translate/core';
+
+type Testimonial = {
+  quoteKey: string;
+  author: string;
+  roleKey: string;
+};
 
 @Component({
   selector: 'app-reviews-page',
-  imports: [],
+  imports: [TranslatePipe],
   templateUrl: './reviews-page.html',
   styleUrl: './reviews-page.scss',
 })
@@ -10,21 +17,21 @@ export class ReviewsPage {
   readonly arrowDefault = '/assets/img/24. Arrow - references.png';
   readonly arrowHover = '/assets/img/arrows.png';
 
-  readonly testimonials = [
+  readonly testimonials: Testimonial[] = [
     {
-      quote: 'Simon worked with Lukas in a group project and highlighted his focused, proactive style and strong execution.',
+      quoteKey: 'REVIEWS.ITEM_1.QUOTE',
       author: 'A. Fischer',
-      role: 'Team Partner',
+      roleKey: 'REVIEWS.ITEM_1.ROLE',
     },
     {
-      quote: 'Our project benefited enormously from Simon efficient way of working.',
+      quoteKey: 'REVIEWS.ITEM_2.QUOTE',
       author: 'T. Schulz',
-      role: 'Frontend Developer',
+      roleKey: 'REVIEWS.ITEM_2.ROLE',
     },
     {
-      quote: 'Lukas has proven to be a reliable teammate with solid technical skills and a proactive approach to project success.',
+      quoteKey: 'REVIEWS.ITEM_3.QUOTE',
       author: 'M. Wagner',
-      role: 'Project Lead',
+      roleKey: 'REVIEWS.ITEM_3.ROLE',
     },
   ];
 

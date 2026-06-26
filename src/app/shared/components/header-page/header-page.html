@@ -1,10 +1,10 @@
 <div class="header-wrapper">
 <div class="hero-page-content">
-    <h3>Fullstack Developer</h3>
+    <h3>{{ 'HEADER.ROLE' | translate }}</h3>
     <h1>Kevin Reinhold Triebe</h1>
     <div class="hero-buttons">
-        <button type="button" (click)="scrollToFeaturedProjects()"><span>Check my work</span></button>
-        <button><span>Contact me</span></button>
+        <button type="button" (click)="scrollToFeaturedProjects()"><span>{{ 'HEADER.BUTTON_WORK' | translate }}</span></button>
+        <button type="button" (click)="scrollToLetsWork()"><span>{{ 'HEADER.BUTTON_CONTACT' | translate }}</span></button>
     </div>
 </div>
 <div class="scroll-widget">
@@ -19,7 +19,7 @@
         <img src="/assets/img/mail.png" alt="Email">
     </a>
     <div class="contact-icons">
-        <a class="contact-icon-link" href="#" aria-label="GitHub">
+        <a class="contact-icon-link" href="https://github.com/KevinTriebeDev" aria-label="GitHub">
             <img src="/assets/img/Github.png" alt="GitHub">
         </a>
         <a class="contact-icon-link" href="https://www.linkedin.com/" aria-label="LinkedIn">
@@ -32,23 +32,23 @@
 <div class="header-banner">
     <div class="header-banner-track">
         <div class="header-banner-group">
-            <span>Fullstack Developer</span>
+            <span>{{ 'HEADER.BANNER_ROLE' | translate }}</span>
             <span>•</span>
-            <span>Based in Lößnitz (SN)</span>
+            <span>{{ 'HEADER.BANNER_LOCATION' | translate }}</span>
             <span>•</span>
-            <span>Available for remote work</span>
+            <span>{{ 'HEADER.BANNER_REMOTE' | translate }}</span>
             <span>•</span>
-            <span>Open to work</span>
+            <span>{{ 'HEADER.BANNER_OPEN' | translate }}</span>
             <span>•</span>
         </div>
         <div class="header-banner-group" aria-hidden="true">
-            <span>Fullstack Developer</span>
+            <span>{{ 'HEADER.BANNER_ROLE' | translate }}</span>
             <span>•</span>
-            <span>Based in Lößnitz (SN)</span>
+            <span>{{ 'HEADER.BANNER_LOCATION' | translate }}</span>
             <span>•</span>
-            <span>Available for remote work</span>
+            <span>{{ 'HEADER.BANNER_REMOTE' | translate }}</span>
             <span>•</span>
-            <span>Open to work</span>
+            <span>{{ 'HEADER.BANNER_OPEN' | translate }}</span>
             <span>•</span>
         </div>
     </div>
